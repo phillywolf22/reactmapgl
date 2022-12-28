@@ -1,5 +1,12 @@
-import Map, { AttributionControl, FullscreenControl, Source, Layer } from "react-map-gl";
+import Map, {
+  AttributionControl,
+  FullscreenControl,
+  Source,
+  Layer,
+} from "react-map-gl";
 import { Key } from "./Key";
+
+//testing commit for kam branch
 
 const earthquakeLayer = {
   id: "earthquakes-layer",
@@ -23,13 +30,13 @@ const earthquakeLayer = {
     "circle-color": "#F34949",
     "circle-stroke-color": "white",
   },
-}
+};
 
 const hurricaneLayer = {
   id: "hurricane-layer",
   type: "line",
   source: "hurricanes",
-  layout: { visibility:"visible" },
+  layout: { visibility: "visible" },
   metadata: {
     name: "Hurricanes",
   },
@@ -48,7 +55,7 @@ const hurricaneLayer = {
       10,
     ],
   },
-}
+};
 function App() {
   //test add comment to commit
   //test add comment for kamron to commit
@@ -62,11 +69,19 @@ function App() {
         {/* Your map content goes here */}
         <AttributionControl customAttribution="Map design by me" />
         <FullscreenControl />
-        <Source id="earthquakes" type='geojson' data="https://raw.githubusercontent.com/phillywolf22/ND_files/master/GEO_earthquakes.json">
+        <Source
+          id="earthquakes"
+          type="geojson"
+          data="https://raw.githubusercontent.com/phillywolf22/ND_files/master/GEO_earthquakes.json"
+        >
           <Layer {...earthquakeLayer} />
         </Source>
-        <Source id="hurricanes" type='geojson' data="https://raw.githubusercontent.com/phillywolf22/ND_files/master/Atlantic_Hurricanes.json">
-        <Layer {...hurricaneLayer} />
+        <Source
+          id="hurricanes"
+          type="geojson"
+          data="https://raw.githubusercontent.com/phillywolf22/ND_files/master/Atlantic_Hurricanes.json"
+        >
+          <Layer {...hurricaneLayer} />
         </Source>
       </Map>
     </div>
