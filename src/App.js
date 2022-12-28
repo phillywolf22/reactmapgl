@@ -1,6 +1,7 @@
 import Map, { AttributionControl, FullscreenControl, Source, Layer } from "react-map-gl";
 import { Key } from "./Key";
 
+//this is phil branch
 const earthquakeLayer = {
   id: "earthquakes-layer",
   type: "circle",
