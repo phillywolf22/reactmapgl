@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import Map, { AttributionControl, FullscreenControl } from "react-map-gl";
+import { Key } from "./Key";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Map
+        style={{ width: "100vw", height: "100vh" }}
+        mapStyle="mapbox://styles/mapbox/streets-v11"
+        mapboxAccessToken={Key}
+      >
+        {/* Your map content goes here */}
+        <AttributionControl customAttribution="Map design by me" />
+        <FullscreenControl />
+      </Map>
     </div>
   );
 }
